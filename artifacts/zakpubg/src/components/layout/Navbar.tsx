@@ -224,11 +224,11 @@ export function Navbar() {
               <div className="flex items-center gap-2 mt-6">
                 <button
                   onClick={toggleTheme}
-                  className="flex-1 h-11 flex items-center justify-center gap-2 border border-border text-foreground hover:border-primary hover:text-primary transition-colors text-xs font-bold uppercase tracking-wider"
+                  className="w-9 h-9 flex items-center justify-center border border-border text-foreground hover:border-primary hover:text-primary transition-colors shrink-0"
                   data-testid="button-theme-toggle-mobile"
+                  aria-label="Toggle theme"
                 >
                   {theme === "dark" ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
-                  {theme === "dark" ? "Light" : "Dark"}
                 </button>
                 <LanguageSwitcher />
               </div>
