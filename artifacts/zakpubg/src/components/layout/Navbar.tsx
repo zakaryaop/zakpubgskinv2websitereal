@@ -93,41 +93,41 @@ export function Navbar() {
             </button>
             <LanguageSwitcher />
             {currentUser ? (
-              <div className="flex items-center gap-2">
-                <Link href="/portal" className="luxury-button flex items-center gap-2 bg-primary text-primary-foreground px-5 py-2.5 font-black text-xs uppercase tracking-[0.18em]">
-                  <Crown className="w-4 h-4" />
+              <div className="flex items-center gap-1.5">
+                <Link href="/portal" className="luxury-button flex items-center gap-1.5 bg-primary text-primary-foreground px-3 py-1.5 font-black text-[10px] uppercase tracking-[0.15em]">
+                  <Crown className="w-3 h-3" />
                   {t("nav.dashboard")}
                 </Link>
-                <button onClick={logout} className="text-xs font-bold uppercase tracking-wider text-muted-foreground hover:text-primary transition-colors px-2">
+                <button onClick={logout} className="text-[10px] font-bold uppercase tracking-wider text-muted-foreground hover:text-primary transition-colors px-1.5">
                   {t("nav.logout")}
                 </button>
               </div>
             ) : authUser ? (
-              <div className="flex items-center gap-2">
-                <Link href="/account" className="luxury-button flex items-center gap-2 bg-primary text-primary-foreground px-5 py-2.5 font-black text-xs uppercase tracking-[0.18em]" data-testid="link-account">
-                  <UserIcon className="w-4 h-4" />
+              <div className="flex items-center gap-1.5">
+                <Link href="/account" className="luxury-button flex items-center gap-1.5 bg-primary text-primary-foreground px-3 py-1.5 font-black text-[10px] uppercase tracking-[0.15em]" data-testid="link-account">
+                  <UserIcon className="w-3 h-3" />
                   {authUser.username}
                 </Link>
                 <button
                   onClick={handleAuthLogout}
-                  className="flex items-center gap-1.5 px-3 py-2 text-xs font-black uppercase tracking-[0.18em] border border-border text-muted-foreground hover:text-primary hover:border-primary transition-colors"
+                  className="flex items-center gap-1 px-2 py-1.5 text-[10px] font-black uppercase tracking-[0.15em] border border-border text-muted-foreground hover:text-primary hover:border-primary transition-colors"
                   data-testid="button-auth-logout"
                   aria-label="Sign out"
                   title="Sign out"
                 >
-                  <LogOut className="w-3.5 h-3.5" />
+                  <LogOut className="w-3 h-3" />
                   <span className="hidden xl:inline">Sign Out</span>
                 </button>
               </div>
             ) : (
               <>
-                <Link href="/signin" className="flex items-center gap-1.5 px-3 py-2 text-xs font-black uppercase tracking-[0.18em] text-muted-foreground hover:text-primary transition-colors" data-testid="link-signin">
-                  <LogIn className="w-3.5 h-3.5" />
+                <Link href="/signin" className="flex items-center gap-1 px-2 py-1.5 text-[10px] font-black uppercase tracking-[0.15em] text-muted-foreground hover:text-primary transition-colors" data-testid="link-signin">
+                  <LogIn className="w-3 h-3" />
                   Sign In
                 </Link>
-                <Link href="/signup" className="luxury-button flex items-center gap-2 bg-primary text-primary-foreground px-5 py-2.5 font-black text-xs uppercase tracking-[0.18em] warrior-glow" data-testid="link-signup">
+                <Link href="/signup" className="luxury-button flex items-center gap-1.5 bg-primary text-primary-foreground px-3 py-1.5 font-black text-[10px] uppercase tracking-[0.15em] warrior-glow" data-testid="link-signup">
                   Sign Up
-                  <ArrowRight className="w-3.5 h-3.5" />
+                  <ArrowRight className="w-3 h-3" />
                 </Link>
               </>
             )}
@@ -162,47 +162,47 @@ export function Navbar() {
               transition={{ type: "spring", damping: 28, stiffness: 220 }}
               className="fixed right-0 top-0 bottom-0 w-[88%] max-w-sm bg-background border-l-2 border-primary z-50 p-4 sm:p-6 flex flex-col shadow-2xl overflow-y-auto"
             >
-              <div className="flex justify-between items-center mb-10">
+              <div className="flex justify-between items-center mb-8">
                 <div className="flex items-center gap-2">
-                  <div className="w-9 h-9 bg-primary flex items-center justify-center">
-                    <Crown className="text-primary-foreground w-4 h-4" />
+                  <div className="w-8 h-8 bg-primary flex items-center justify-center">
+                    <Crown className="text-primary-foreground w-3.5 h-3.5" />
                   </div>
-                  <span className="font-heading font-black text-lg text-foreground">
+                  <span className="font-heading font-black text-base text-foreground">
                     ZakPubg<span className="text-primary">Skin</span>
                   </span>
                 </div>
-                <button onClick={() => setIsOpen(false)} className="w-10 h-10 flex items-center justify-center border border-border text-foreground hover:border-primary hover:text-primary transition-colors">
-                  <X className="w-5 h-5" />
+                <button onClick={() => setIsOpen(false)} className="w-8 h-8 flex items-center justify-center border border-border text-foreground hover:border-primary hover:text-primary transition-colors">
+                  <X className="w-4 h-4" />
                 </button>
               </div>
 
               {currentUser ? (
-                <Link href="/portal" onClick={() => setIsOpen(false)} className="luxury-button mb-6 w-full text-center flex items-center justify-center gap-2 bg-primary text-primary-foreground px-6 py-4 font-black text-sm uppercase tracking-[0.18em] warrior-glow">
-                  <Crown className="w-5 h-5" />
+                <Link href="/portal" onClick={() => setIsOpen(false)} className="luxury-button mb-6 w-full text-center flex items-center justify-center gap-1.5 bg-primary text-primary-foreground px-4 py-2.5 font-black text-xs uppercase tracking-[0.15em] warrior-glow">
+                  <Crown className="w-4 h-4" />
                   {t("nav.dashboard")}
                 </Link>
               ) : authUser ? (
                 <div className="mb-6 space-y-2">
-                  <Link href="/account" onClick={() => setIsOpen(false)} className="luxury-button w-full text-center flex items-center justify-center gap-2 bg-primary text-primary-foreground px-6 py-4 font-black text-sm uppercase tracking-[0.18em] warrior-glow">
-                    <UserIcon className="w-5 h-5" />
+                  <Link href="/account" onClick={() => setIsOpen(false)} className="luxury-button w-full text-center flex items-center justify-center gap-1.5 bg-primary text-primary-foreground px-4 py-2.5 font-black text-xs uppercase tracking-[0.15em] warrior-glow">
+                    <UserIcon className="w-4 h-4" />
                     My Account ({authUser.username})
                   </Link>
                   <button
                     onClick={() => { setIsOpen(false); handleAuthLogout(); }}
-                    className="w-full flex items-center justify-center gap-2 border-2 border-border hover:border-primary text-foreground hover:text-primary px-6 py-3 font-black text-sm uppercase tracking-[0.18em] transition-colors"
+                    className="w-full flex items-center justify-center gap-1.5 border border-border hover:border-primary text-foreground hover:text-primary px-4 py-2 font-black text-xs uppercase tracking-[0.15em] transition-colors"
                     data-testid="button-auth-logout-mobile"
                   >
-                    <LogOut className="w-4 h-4" />
+                    <LogOut className="w-3.5 h-3.5" />
                     Sign Out
                   </button>
                 </div>
               ) : (
                 <div className="grid grid-cols-2 gap-2 mb-6">
-                  <Link href="/signin" onClick={() => setIsOpen(false)} className="w-full text-center flex items-center justify-center gap-1.5 border-2 border-primary text-primary px-2 py-3 font-black text-xs uppercase tracking-[0.12em]">
-                    <LogIn className="w-3.5 h-3.5" />
+                  <Link href="/signin" onClick={() => setIsOpen(false)} className="w-full text-center flex items-center justify-center gap-1 border border-primary text-primary px-2 py-2 font-black text-[11px] uppercase tracking-[0.1em]">
+                    <LogIn className="w-3 h-3" />
                     Sign In
                   </Link>
-                  <Link href="/signup" onClick={() => setIsOpen(false)} className="luxury-button w-full text-center flex items-center justify-center gap-1.5 bg-primary text-primary-foreground px-2 py-3 font-black text-xs uppercase tracking-[0.12em] warrior-glow">
+                  <Link href="/signup" onClick={() => setIsOpen(false)} className="luxury-button w-full text-center flex items-center justify-center gap-1 bg-primary text-primary-foreground px-2 py-2 font-black text-[11px] uppercase tracking-[0.1em] warrior-glow">
                     Sign Up
                   </Link>
                 </div>
