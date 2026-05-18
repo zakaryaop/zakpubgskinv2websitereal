@@ -160,7 +160,7 @@ export function Navbar() {
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ type: "spring", damping: 28, stiffness: 220 }}
-              className="fixed right-0 top-0 bottom-0 w-[85%] max-w-sm bg-background border-l-2 border-primary z-50 p-6 flex flex-col shadow-2xl overflow-y-auto"
+              className="fixed right-0 top-0 bottom-0 w-[88%] max-w-sm bg-background border-l-2 border-primary z-50 p-4 sm:p-6 flex flex-col shadow-2xl overflow-y-auto"
             >
               <div className="flex justify-between items-center mb-10">
                 <div className="flex items-center gap-2">
@@ -198,11 +198,11 @@ export function Navbar() {
                 </div>
               ) : (
                 <div className="grid grid-cols-2 gap-2 mb-6">
-                  <Link href="/signin" onClick={() => setIsOpen(false)} className="w-full text-center flex items-center justify-center gap-2 border-2 border-primary text-primary px-4 py-4 font-black text-sm uppercase tracking-[0.18em]">
-                    <LogIn className="w-4 h-4" />
+                  <Link href="/signin" onClick={() => setIsOpen(false)} className="w-full text-center flex items-center justify-center gap-1.5 border-2 border-primary text-primary px-2 py-3 font-black text-xs uppercase tracking-[0.12em]">
+                    <LogIn className="w-3.5 h-3.5" />
                     Sign In
                   </Link>
-                  <Link href="/signup" onClick={() => setIsOpen(false)} className="luxury-button w-full text-center flex items-center justify-center gap-2 bg-primary text-primary-foreground px-4 py-4 font-black text-sm uppercase tracking-[0.18em] warrior-glow">
+                  <Link href="/signup" onClick={() => setIsOpen(false)} className="luxury-button w-full text-center flex items-center justify-center gap-1.5 bg-primary text-primary-foreground px-2 py-3 font-black text-xs uppercase tracking-[0.12em] warrior-glow">
                     Sign Up
                   </Link>
                 </div>
@@ -224,7 +224,7 @@ export function Navbar() {
               <div className="flex items-center gap-2 mt-6">
                 <button
                   onClick={toggleTheme}
-                  className="w-9 h-9 flex items-center justify-center border border-border text-foreground hover:border-primary hover:text-primary transition-colors shrink-0"
+                  className="w-10 h-10 shrink-0 flex items-center justify-center border border-border text-foreground hover:border-primary hover:text-primary transition-colors"
                   data-testid="button-theme-toggle-mobile"
                   aria-label="Toggle theme"
                 >
