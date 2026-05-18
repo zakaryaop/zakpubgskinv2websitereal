@@ -1,0 +1,14 @@
+[phases.setup]
+nixPkgs = ["nodejs_20", "pnpm"]
+
+[phases.install]
+cmds = ["corepack enable", "pnpm install --frozen-lockfile"]
+
+[phases.build]
+cmds = [
+  "PORT=3000 BASE_PATH=/ pnpm --filter @workspace/zakpubg run build",
+  "pnpm --filter @workspace/api-server run build",
+]
+
+[start]
+cmd = "NODE_ENV=production SERVE_STATIC=1 pnpm --filter @workspace/api-server run start"
