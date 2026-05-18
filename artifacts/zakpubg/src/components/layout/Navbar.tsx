@@ -85,11 +85,11 @@ export function Navbar() {
           <div className="hidden md:flex items-center gap-2">
             <button
               onClick={toggleTheme}
-              className="w-10 h-10 flex items-center justify-center border border-border text-foreground hover:border-primary hover:text-primary transition-colors"
+              className="w-8 h-8 flex items-center justify-center border border-border text-foreground hover:border-primary hover:text-primary transition-colors"
               data-testid="button-theme-toggle"
               aria-label="Toggle theme"
             >
-              {theme === "dark" ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
+              {theme === "dark" ? <Sun className="w-3 h-3" /> : <Moon className="w-3 h-3" />}
             </button>
             <LanguageSwitcher />
             {currentUser ? (
@@ -135,11 +135,11 @@ export function Navbar() {
 
           {/* Mobile menu trigger */}
           <button
-            className="md:hidden w-10 h-10 flex items-center justify-center border border-border text-foreground"
+            className="md:hidden w-8 h-8 flex items-center justify-center border border-border text-foreground"
             onClick={() => setIsOpen(true)}
             aria-label="Open menu"
           >
-            <Menu className="w-5 h-5" />
+            <Menu className="w-4 h-4" />
           </button>
         </div>
       </nav>
@@ -224,11 +224,11 @@ export function Navbar() {
               <div className="flex items-center gap-2 mt-6">
                 <button
                   onClick={toggleTheme}
-                  className="w-10 h-10 shrink-0 flex items-center justify-center border border-border text-foreground hover:border-primary hover:text-primary transition-colors"
+                  className="w-8 h-8 shrink-0 flex items-center justify-center border border-border text-foreground hover:border-primary hover:text-primary transition-colors"
                   data-testid="button-theme-toggle-mobile"
                   aria-label="Toggle theme"
                 >
-                  {theme === "dark" ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
+                  {theme === "dark" ? <Sun className="w-3 h-3" /> : <Moon className="w-3 h-3" />}
                 </button>
                 <LanguageSwitcher />
               </div>
